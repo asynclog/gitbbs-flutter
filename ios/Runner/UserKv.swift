@@ -16,6 +16,7 @@ class UserKv {
     
     public  static func saveToken(_ token:String){
         userKv?.set(token, forKey: "token")
+        userKv?.sync()
     }
 
     
@@ -25,5 +26,6 @@ class UserKv {
     
     public  static func saveUser(_  user:String){
         userKv?.set(user, forKey: "user")
+        userKv?.sync()
     }
 }

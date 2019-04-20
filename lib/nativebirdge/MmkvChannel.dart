@@ -23,7 +23,7 @@ class MmkvChannel {
 
   Future saveToken(String token) async {
     try {
-      String result =
+      bool result =
           await platform.invokeMethod('saveToken', {'token': token});
       return result;
     } on PlatformException {
